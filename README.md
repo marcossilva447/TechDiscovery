@@ -1,3 +1,7 @@
+# teste
+
+teeeste
+
 # Sobre Mim
 
 Olá! 👋 Sou um estudante de Redes de Computadores na Fatec Indaiatuba. Minha jornada acadêmica começou com uma formação em Licenciatura em Química, mas agora estou focado em expandir meus conhecimentos na área de tecnologia. Atualmente, estou estudando para obter as certificações AWS Cloud Practitioner e Cisco CCNA. Além disso, sou apaixonado por Python, SAP e DevOps.
