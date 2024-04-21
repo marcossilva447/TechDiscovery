@@ -1,37 +1,34 @@
-import kivy
+while True:
+    print("Selecione a operação:")
+    print("1. Soma")
+    print("2. Subtração")
+    print("3. Multiplicação")
+    print("4. Divisão")
+    print("5. Sair")
 
-from kivy.app import App
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.button import Button
+    opcao = input("Digite o número da operação desejada: ")
 
-class Calculator(GridLayout):
-    def __init__(self, **kwargs):
-        super(Calculator, self).__init__(**kwargs)
-        self.cols = 4
+    if opcao == "5":
+        print("Encerrando a calculadora...")
+        break
 
-        self.add_widget(Button(text="7"))
-        self.add_widget(Button(text="8"))
-        self.add_widget(Button(text="9"))
-        self.add_widget(Button(text="/"))
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
 
-        self.add_widget(Button(text="4"))
-        self.add_widget(Button(text="5"))
-        self.add_widget(Button(text="6"))
-        self.add_widget(Button(text="*"))
-
-        self.add_widget(Button(text="1"))
-        self.add_widget(Button(text="2"))
-        self.add_widget(Button(text="3"))
-        self.add_widget(Button(text="-"))
-
-        self.add_widget(Button(text="0"))
-        self.add_widget(Button(text="."))
-        self.add_widget(Button(text="="))
-        self.add_widget(Button(text="+"))
-
-class CalculatorApp(App):
-    def build(self):
-        return Calculator()
-
-if __name__ == '__main__':
-    CalculatorApp().run()
+    if opcao == "1":
+        resultado = num1 + num2
+        print("Resultado: ", resultado)
+    elif opcao == "2":
+        resultado = num1 - num2
+        print("Resultado: ", resultado)
+    elif opcao == "3":
+        resultado = num1 * num2
+        print("Resultado: ", resultado)
+    elif opcao == "4":
+        if num2 != 0:
+            resultado = num1 / num2
+            print("Resultado: ", resultado)
+        else:
+            print("Erro: Divisão por zero!")
+    else:
+        print("Opção inválida! Por favor, selecione uma opção válida.")
