@@ -107,3 +107,68 @@ lista = [1, "Python", [40, 30, 20]]
 print(lista) # [1, "Python", [40, 30, 20]]
 lista.clear()
 print(lista) # []
+
+# [].copy
+
+lista = [1, "Python", [40, 30, 20]]
+lista.copy()
+print(lista) # [1, "Python", [40, 30, 20]] --> não altera a lista original
+
+# [].count
+
+cores = ["azul", "verde", "amarelo", "azul", "vermelho", "azul"]
+cores.count("azul") # 3
+cores.count("preto") # 0
+
+# [].extend
+linguagens = ["python", "java", "c"]
+print(linguagens) # ["python", "java", "c"]
+
+linguagens.extend(["ruby", "javascript"])
+print(linguagens) # ["python", "java", "c", "ruby", "javascript"]
+
+# [].index retorna a primeira ocorrência na lista
+liguagens = ["python", "java", "c"]
+print(linguagens.index("python")) # 0
+print(linguagens.index("c")) # 2
+
+# [].pop remove o último elemento da lista
+linguagens = ["python", "java", "c"]
+linguagens.pop()
+print(linguagens) # ["python", "java"]
+linguagens.pop(0) # remove o primeiro elemento
+
+# [].remove remove a primeira ocorrência do valor
+linguagens = ["python", "java", "c"]
+linguagens.remove("java")
+print(linguagens) # ["python", "c"]
+
+# [].reverse inverte a ordem dos elementos
+linguagens = ["python", "java", "c"]
+linguagens.reverse()
+print(linguagens) # ["c", "java", "python"]
+
+# [].sort ordena a lista
+numeros = [10, 5, 3, 8, 4]
+numeros.sort()
+print(numeros) # [3, 4, 5, 8, 10]
+
+# [].sort(reverse=True) ordena a lista em ordem decrescente
+numeros = [10, 5, 3, 8, 4]
+numeros.sort(reverse=True)
+print(numeros) # [10, 8, 5, 4, 3]
+
+# [].sort(key=função) ordena a lista de acordo com a função
+def funcao_ordenacao(valor):
+    return valor % 2
+
+numeros = [10, 5, 3, 8, 4]
+numeros.sort(key=funcao_ordenacao)
+print(numeros) # [10, 8, 4, 5, 3]
+
+# função lambda --> função anônima que pode ser passada como argumento
+numeros = [10, 5, 3, 8, 4]
+numeros.sort(key=lambda x: x % 2)
+print(numeros) # [10, 8, 4, 5, 3]
+
+
