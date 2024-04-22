@@ -171,4 +171,20 @@ numeros = [10, 5, 3, 8, 4]
 numeros.sort(key=lambda x: x % 2)
 print(numeros) # [10, 8, 4, 5, 3]
 
+# len() --> retorna o tamanho da lista
+numeros = [10, 5, 3, 8, 4]
+print(len(numeros)) # 5
+
+# max() --> retorna o maior valor da lista
+numeros = [10, 5, 3, 8, 4]
+print(max(numeros)) # 10
+
+# min() --> retorna o menor valor da lista
+numeros = [10, 5, 3, 8, 4]
+print(min(numeros)) # 3
+
+# sorted() --> retorna uma nova lista ordenada
+numeros = [10, 5, 3, 8, 4]
+print(sorted(numeros)) # [3, 4, 5, 8, 10]
+
 
