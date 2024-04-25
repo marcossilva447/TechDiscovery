@@ -61,14 +61,60 @@ for chave, valor in contatos.items():
 # métodos de dicionários
 
 # clear() - remove todos os itens do dicionário
+
+dados.clear() # {}
+
 # copy() - retorna uma cópia do dicionário
+
+copia = contatos.copy()
+
 # fromkeys() - retorna um dicionário com as chaves especificadas e o valor especificado
+
+pessoas = {}.fromkeys(["nome", "idade"], "desconhecido") # {"nome": "desconhecido", "idade": "desconhecido"}
+
 # get() - retorna o valor da chave especificada
+
+pessoas.get("nome") # desconhecido
+
 # items() - retorna uma lista contendo uma tupla para cada par chave-valor
-# keys() -
+
+pessoas.items() # dict_items([('nome', 'desconhecido'), ('idade', 'desconhecido')])
+#ou
+pessoas.items() # dict_items([('nome', 'desconhecido'), ('idade', 'desconhecido')])
+
+# keys() - retorna as chaves do dicionário
+
+pessoas.keys() # dict_keys(['nome', 'idade'])
+
 # pop() - remove o item com a chave especificada
+
+pessoas.pop("idade") # desconhecido
+
 # popitem() - remove o último item inserido
+
+pessoas.popitem() # ('nome', 'desconhecido')
+
 # setdefault() - retorna o valor da chave especificada. Se a chave não existir, insere a chave com o valor especificado
+
+pessoas.setdefault("nome", "Guilherme") # desconhecido
+pessoas.setdefault("telefone", "9999-9999") # 9999-9999
+
 # update() - atualiza o dicionário com os elementos especificados
+
+pessoas.update({"nome": "Guilherme"}) # {'nome': 'Guilherme', 'telefone': '9999-9999'}
+
+
 # values() - retorna uma lista de todos os valores no dicionário
+
+pessoas.values() # dict_values(['Guilherme', '9999-9999'])
+
+
+# in - verifica se a chave especificada existe no dicionário
+
+"nome" in pessoas # True
+
+# del - remove o item com a chave especificada
+
+del pessoas["nome"] # {'telefone': '9999-9999'}
+
 '''
