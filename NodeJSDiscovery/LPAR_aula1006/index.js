@@ -6,8 +6,13 @@ const port = 3000
 app.use(express.json())
 
 app.get('/tarefas',(req,res) =>{
-    const tarefas = getAll()
+    const tarefas = getAll('tarefas')
     res.json(tarefas)
+})
+
+app.get('/usuarios',(req,res)=>{
+    const usuarios = getAll('usuarios')
+    res.json(usuarios)
 })
 
 app.get('/primeira-tarefa',(req,res)=>{
